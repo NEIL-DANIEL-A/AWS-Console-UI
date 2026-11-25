@@ -20,8 +20,8 @@ export const App: React.FC = () => {
       <FlashbarProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Navigate to="/s3" replace />} />
-            <Route path="/console" element={<Navigate to="/s3" replace />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/console" element={<HomePage />} />
             <Route path="/s3" element={<BucketsPage />} />
             <Route path="/s3/buckets/:name" element={<BucketDetailPage />} />
             <Route path="/ec2/security-groups" element={<SecurityGroupsPage />} />

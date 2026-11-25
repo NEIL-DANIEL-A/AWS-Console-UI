@@ -204,6 +204,20 @@ export const ConsoleLayout: React.FC<ConsoleLayoutProps> = ({ children, breadcru
           }
           utilities={[
             {
+              type: 'menu-dropdown',
+              text: 'Services',
+              items: SERVICES.filter((s) => s.enabled).map((s) => ({
+                id: s.id,
+                text: s.name,
+                href: s.path,
+              })),
+              onItemFollow: (event) => {
+                event.preventDefault();
+                const service = SERVICES.find((s) => s.id === event.detail.id);
+                if (service?.enabled) navigate(service.path);
+              },
+            },
+            {
               type: 'button',
               text:
                 emulatorReachable === null

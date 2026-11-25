@@ -28,7 +28,7 @@ export const HomePage: React.FC = () => {
       >
         <SpaceBetween size="l">
           <Cards
-            header={<Header variant="h2">Recently visited</Header>}
+            header={<Header variant="h2">Services</Header>}
             items={SERVICES.filter((s) => s.enabled)}
             cardsPerRow={[{ cards: 1 }, { minWidth: 500, cards: 3 }]}
             cardDefinition={{
